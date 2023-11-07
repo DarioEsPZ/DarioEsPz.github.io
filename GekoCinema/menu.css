@@ -1,0 +1,169 @@
+body {
+    background-image: url(fondogris.jpg);
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    min-height: 70px;
+}
+
+@media (max-width:700px){
+    body{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: #2EFF00;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    height: 80px;
+}
+
+.enca img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+.enca{
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    .enca{
+        padding: 10px 0px;
+    }
+}
+
+
+nav a:hover{
+    color: aliceblue;
+}
+
+.container {
+    display: flex;
+}
+
+section {
+    margin: 50px;
+}
+
+section article img {
+    margin: 40px;
+}
+
+section article p, h1 {
+    margin: 20px;
+}
+
+
+
+.container2 {
+    display: flex;
+}
+
+.boton1 {
+    padding-top: 100px;
+}
+
+
+a button {
+    background: transparent;
+    margin-left: 4rem;
+    border: 6px solid white;
+    border-radius: 10px;
+    padding: 4px;
+    color: white;
+    transition: border-color 1s ease;
+    
+}
+
+a button:hover {
+    cursor: pointer;
+    border-color: orangered;
+
+}
+
+.alto {
+    padding-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.5 ease;
+}
+
+
+img:hover{
+    cursor: pointer;
+}
+
+p{
+    color: white;
+    transition: color 0.5s ease;
+}
+
+p:hover{
+    color: grey;
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+    transition: color 0.5s ease;
+}
+
+h1:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+/* CODIGO DEL PROFE */
+
+  article{
+    position: relative;
+    transition: all .3s ease;
+}
+article img:first-child{   /*representa el primer elemento entre un grupo de elementos hermanos.*/
+    box-shadow: 0 60px 60px
+    -60px rgba(0,30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 60%;
+
+}
+article img:last-child{/*representa el ultimo elemento entre un grupo de elementos hermanos.*/
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: all .3s ease;
+    opacity: 0;
+}
+article:hover{/*interaccion con el elemento (imagen).*/
+    transform:
+    perspective(250px)
+    rotateX(10deg)
+    translateY(-5%)
+    translateZ(0);
+}
+
+

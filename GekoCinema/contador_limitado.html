@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contador de Votos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #voto-contenedor {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #contador {
+            font-size: 36px;
+        }
+
+        button {
+            font-size: 24px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="voto-contenedor">
+        <h1>Contador de Votos</h1>
+        <div id="contador">0</div>
+        <button onclick="votar()">Votar</button>
+    </div>
+
+    <script>
+        let contador = 0;
+
+        // Función para verificar si el usuario ha votado
+        function verificarVoto() {
+            return (document.cookie.indexOf("voto=true") !== -1);
+        }
+
+        // Función para establecer una cookie que indica que el usuario ha votado
+        function marcarVoto() {
+            document.cookie = "voto=true";
+        }
+
+        // Función para votar (incrementa el contador si el usuario no ha votado)
+        function votar() {
+            if (!verificarVoto()) {
+                contador++;
+                actualizarContador();
+                marcarVoto();
+            }
+        }
+
+        function actualizarContador() {
+            document.getElementById("contador").innerHTML = contador;
+        }
+    </script>
+</body>
+</html>

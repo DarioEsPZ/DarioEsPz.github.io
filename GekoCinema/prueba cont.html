@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prueba.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+    
+</script>
+<input type="button" onclick="alerta()" value="fhfke">
+
+
+<section>
+    <h3>Puntua esta Pelicula</h3>
+    <div class="container">
+        <article>
+            <div id="voto-contenedor">
+                <img src="like 2.png"  onclick="sumarVoto()">
+                <p id="contador">0</p>
+            </div>
+        </article>
+        <article>
+            <div id="voto-contenedor2">
+                <img src="dislike 2.png" onclick="sumarVoto2()">
+                <p id="contador2">0</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+</section>
+
+
+<script>
+let contador = 0;
+
+function sumarVoto() {
+    if (!verificarVoto()) {
+                contador++;
+                actualizarContador();
+                marcarVoto();
+                alerta();
+            }
+}
+
+function verificarVoto() {
+            return (document.cookie.indexOf("voto=true") !== -1);
+        }
+
+function alerta(){
+        alert("usted solo puede votar una vez");
+    }
+
+function actualizarContador() {
+    document.getElementById("contador").innerHTML = contador;
+}
+
+
+
+
+function votar() {
+            if (!verificarVoto()) {
+                contador++;
+                actualizarContador();
+                marcarVoto();
+            }
+        }
+
+
+
+
+let contador2 = 0;
+function sumarVoto2() {
+    contador2++;
+    actcont();
+}
+
+function actcont(){
+    document.getElementById("contador2").innerHTML = contador2;
+}
+</script>
+
+</body>
+</html>

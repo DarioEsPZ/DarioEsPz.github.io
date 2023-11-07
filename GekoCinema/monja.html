@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="monja.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="acciones.js"></script>
+    <title>Trailer - La Monja</title>
+    <a style="color: white;" href="menu.html">Regresar</a>
+</head>
+
+<body>
+        <section>
+            <article>
+                <h1>La Monja</h1>
+                <h4>Trailer:</h4>
+                <img src="monja.jpg" alt="Trailer - La Monja" class="monjaa">
+                <h2>Sinopsis:</h2>
+                <p>1956  Francia. Un sacerdote es asesinado. Un mal se está extendiendo. <br>La secuela del gran éxito mundial
+                sigue a la Hermana Irene cuando una<br>vez más se encuentra cara a cara con Valak, la monja demonio.</p>
+                <h1>Creditos Y Reparto:</h1>
+                <p>Actores: Taissa Farmiga, Jonas Bloquet, Bonnie Aarons, Anna Popplewell</p>
+                <p>Directores: Michael Chaves</p>
+            </article>
+            <br>
+            <section>
+                <h3>Puntua esta Pelicula</h3>
+                <div class="container">
+                    <article>
+                        <div id="voto-contenedor">
+                            <img src="like 2.png"  onclick="sumarVoto()">
+                            <p id="contador">0</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div id="voto-contenedor2">
+                            <img src="dislike 2.png" onclick="sumarVoto2()">
+                            <p id="contador2">0</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+        </section>
+        
+
+        <script>
+            let contador = 0;
+
+
+            function sumarVoto() {
+                contador++;
+                actualizarContador();
+            }
+
+            function actualizarContador() {
+                document.getElementById("contador").innerHTML = contador;
+            }
+
+
+
+
+            let contador2 = 0;
+            function sumarVoto2() {
+                contador2++;
+                actcont();
+            }
+
+            function actcont(){
+                document.getElementById("contador2").innerHTML = contador2;
+            }
+        </script>
+
+
+</body>
+</html>
